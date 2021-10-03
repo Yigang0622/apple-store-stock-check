@@ -6,7 +6,7 @@ request_url = "https://maker.ifttt.com/trigger/miketech_new_comment/with/key/jV9
 
 def send_ifttt_notification(msg):
     params = {
-        'value1': 'App Store检测到库存',
+        'value1': 'Apple Store检测到库存',
         'value2': msg
     }
     res = requests.post(request_url, json=params)
