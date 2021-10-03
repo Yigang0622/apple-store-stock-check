@@ -1,6 +1,6 @@
 import requests
 import datetime
-
+from ifttt_util import send_ifttt_notification
 
 class AppleStoreCity:
     shanghai = '上海'
@@ -64,5 +64,6 @@ def check_stock_availability(sku):
         return results
     except Exception as e:
         print(e)
+        send_ifttt_notification(e)
         return []
 

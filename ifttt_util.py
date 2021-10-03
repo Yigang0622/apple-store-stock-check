@@ -21,5 +21,5 @@ def send_ifttt_apple_stock_notification(results):
 
 # TEST
 # result = AppleStoreStockCheckResult()
-# result.store_name = "测试测试"
+# result.store_name = "单元测试"
 # send_ifttt_apple_stock_notification([result])
