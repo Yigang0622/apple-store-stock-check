@@ -10,7 +10,7 @@ class StockCheckThread(threading.Thread):
         print("thread {} inited".format(self))
 
     def run(self) -> None:
-        results = check_stock_availability(AppleIphoneSKU.iPhone13Pro256GBlue)
+        results = check_stock_availability(AppleIphoneSKU.iPhone12256GGreen)
         results_filtered = [x for x in results if x.available]
         if len(results_filtered):
             send_ifttt_apple_stock_notification(results_filtered)

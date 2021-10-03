@@ -20,6 +20,8 @@ class AppleStoreLocation:
 class AppleIphoneSKU:
     # iPhone 13 pro 256G 远峰蓝
     iPhone13Pro256GBlue = 'MLTE3CH/A'
+    iPhone12128GGreen = 'MGGY3CH/A'
+    iPhone12256GGreen = 'MGH53CH/A'
 
 
 class AppleStoreStockCheckResult:
@@ -52,8 +54,8 @@ def check_stock_availability(sku):
             store_name = each_store['storeName']
             city = each_store['city']
             availability = each_store['partsAvailability']
-            if AppleIphoneSKU.iPhone13Pro256GBlue in availability:
-                can_pickup = availability[AppleIphoneSKU.iPhone13Pro256GBlue]['storeSelectionEnabled']
+            if sku in availability:
+                can_pickup = availability[sku]['storeSelectionEnabled']
                 if city == AppleStoreCity.shanghai:
                     result = AppleStoreStockCheckResult()
                     result.store_name = store_name
