@@ -6,7 +6,8 @@ freq = 3
 print("Apple Store iPhone availability check started with frequency {}s".format(freq))
 
 while True:
-    t = StockCheckThread()
+    sku = AppleIphoneSKU.iPhone12128GGreen
+    t = StockCheckThread(sku=sku)
     t.start()
     time.sleep(freq)
     print()

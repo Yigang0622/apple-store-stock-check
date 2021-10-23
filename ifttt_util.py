@@ -1,7 +1,7 @@
 import requests
-from check import *
+from check import AppleStoreStockCheckResult
 
-request_url = "https://maker.ifttt.com/trigger/miketech_new_comment/with/key/jV9PDLNh6RwvG4t0BxB2ENWE_p1uGd26jarTh-41223"
+request_url = "https://maker.ifttt.com/trigger/mike_notification/with/key/jV9PDLNh6RwvG4t0BxB2ENWE_p1uGd26jarTh-41223"
 
 
 def send_ifttt_notification(msg):
@@ -21,5 +21,5 @@ def send_ifttt_apple_stock_notification(results):
 
 # TEST
 # result = AppleStoreStockCheckResult()
-# result.store_name = "单元测试"
+# result.store_name = "单元测试PASS"
 # send_ifttt_apple_stock_notification([result])
