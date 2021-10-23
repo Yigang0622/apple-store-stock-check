@@ -22,6 +22,7 @@ class AppleIphoneSKU:
     iPhone13Pro256GBlue = 'MLTE3CH/A'
     iPhone12128GGreen = 'MGGY3CH/A'
     iPhone12256GGreen = 'MGH53CH/A'
+    ipad202164GBlackWifi2021 = 'MK2K3CH/A'
 
 
 class AppleStoreStockCheckResult:

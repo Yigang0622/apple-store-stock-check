@@ -3,6 +3,7 @@ from check import *
 from ifttt_util import *
 from playsound import playsound
 
+
 class StockCheckThread(threading.Thread):
 
     def __init__(self, sku: AppleIphoneSKU):
@@ -16,7 +17,3 @@ class StockCheckThread(threading.Thread):
         if len(results_filtered):
             playsound("beep.wav")
             # send_ifttt_apple_stock_notification(results_filtered)
-
-
-    def __del__(self):
-        print("thread {} del \n".format(self))
