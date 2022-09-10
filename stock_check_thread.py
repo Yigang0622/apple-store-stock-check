@@ -1,8 +1,7 @@
 import threading
 from check import *
 from ifttt_util import *
-from playsound import playsound
-
+from sound_util import *
 
 class StockCheckThread(threading.Thread):
 
@@ -15,5 +14,5 @@ class StockCheckThread(threading.Thread):
         results = check_stock_availability(sku=self.sku)
         results_filtered = [x for x in results if x.available]
         if len(results_filtered):
-            playsound("beep.wav")
+            play_beep_sound()
             # send_ifttt_apple_stock_notification(results_filtered)

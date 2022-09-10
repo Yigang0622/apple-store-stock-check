@@ -6,7 +6,6 @@ Python3
 ## 依赖安装
 ```shell
 pip3 install requests
-pip3 install playsound
 ```
 
 ## 运行
