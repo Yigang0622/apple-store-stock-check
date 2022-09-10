@@ -56,7 +56,7 @@ def check_stock_availability(sku):
             city = each_store['city']
             availability = each_store['partsAvailability']
             if sku in availability:
-                can_pickup = availability[sku]['storeSelectionEnabled']
+                can_pickup = availability[sku]['messageTypes']['compact']['storeSelectionEnabled']
                 if city == AppleStoreCity.shanghai:
                     result = AppleStoreStockCheckResult()
                     result.store_name = store_name
